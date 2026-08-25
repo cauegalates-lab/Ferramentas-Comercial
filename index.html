@@ -4,9 +4,9 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Ferramentas Comercial</title>
-<meta content="Central comercial com Links, Simulador Técnico, Pós com Estágio para consulta e Campanhas." name="description"/>
-<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23003366'/%3E%3Ctext x='50' y='62' text-anchor='middle' font-size='48' font-family='Arial' font-weight='900' fill='%23ff9700'%3EFC%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<title>Simulador Técnico | UNIFAHE</title>
+<meta content="Simulador Técnico e consulta de pós-graduações com estágio supervisionado." name="description"/>
+<link href="favicon.ico" rel="icon" sizes="any" type="image/x-icon"/>
 <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
 <style>
 
@@ -2616,6 +2616,7 @@ textarea {
   flex-wrap: wrap;
 }
 .fc-menu-button {
+  position: relative !important;
   position: relative;
   border: 0;
   background: transparent;
@@ -2811,7 +2812,7 @@ textarea {
 .tool-camp .main {
   height: 100% !important;
   min-height: 0 !important;
-  overflow: auto !important;
+  overflow: hidden !important;
 }
 .tool-camp .campaign-count-badge.lead,
 .tool-camp .action-btn-inline.lead {
@@ -3492,7 +3493,7 @@ body {
 
 
 /* Padrão único dos botões internos */
-.fc-root button:not(.fc-menu-button),
+.fc-root button:not(.fc-menu-button):not(.fc-sidebar-toggle),
 .tool-section button {
   min-height: 30px !important;
   border-radius: 6px !important;
@@ -3504,7 +3505,7 @@ body {
   text-transform: none !important;
   box-shadow: none !important;
 }
-.fc-root button:not(.fc-menu-button):hover,
+.fc-root button:not(.fc-menu-button):not(.fc-sidebar-toggle):hover,
 .tool-section button:hover {
   box-shadow: none !important;
 }
@@ -3525,7 +3526,7 @@ body {
 }
 .tool-home .home-hero {
   position: relative !important;
-  overflow: hidden !important;
+  overflow: auto !important;
   min-height: 330px !important;
   display: flex !important;
   align-items: center !important;
@@ -4468,6 +4469,1628 @@ body {
   }
 }
 
+/* === VISUAL FINAL: RUMO AO 1 MILHÃO, COM CORES SÓLIDAS === */
+:root {
+  --rm-blue: #003b70;
+  --rm-blue-dark: #062848;
+  --rm-orange: #f47b20;
+  --rm-page: #edf1f5;
+  --rm-surface: #ffffff;
+  --rm-surface-soft: #f7f9fb;
+  --rm-text: #152536;
+  --rm-muted: #667789;
+  --rm-border: #d7e0e8;
+}
+
+body,
+.fc-root,
+.fc-main,
+.tool-section,
+.tool-sim,
+.tool-pos {
+  background: var(--rm-page) !important;
+  background-image: none !important;
+}
+
+#areaInicio,
+#areaLinks,
+#areaCampanhas {
+  display: none !important;
+}
+
+.fc-header {
+  background: var(--rm-blue-dark) !important;
+  border: 0 !important;
+  border-bottom: 4px solid var(--rm-orange) !important;
+  box-shadow: 0 5px 16px rgba(6, 40, 72, .18) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+.fc-header-inner {
+  min-height: 64px !important;
+  padding: 8px 24px !important;
+}
+
+.fc-header-inner::after {
+  display: none !important;
+}
+
+.fc-brand-logo {
+  width: 154px !important;
+  max-width: 154px !important;
+}
+
+.fc-menu {
+  gap: 14px !important;
+}
+
+.fc-menu-button {
+  min-height: 38px !important;
+  padding: 9px 16px !important;
+  border: 1px solid rgba(255, 255, 255, .26) !important;
+  border-radius: 7px !important;
+  background: transparent !important;
+  color: #ffffff !important;
+  font-size: 13px !important;
+  font-weight: 800 !important;
+}
+
+.fc-menu-button::after {
+  display: none !important;
+}
+
+.fc-menu-button:hover,
+.fc-menu-button.active {
+  background: var(--rm-orange) !important;
+  border-color: var(--rm-orange) !important;
+  color: #ffffff !important;
+}
+
+.fc-current {
+  display: block !important;
+  min-width: 0 !important;
+  width: 240px !important;
+  grid-column: 3 !important;
+  justify-self: end !important;
+  text-align: right !important;
+  color: rgba(255, 255, 255, .66) !important;
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: .04em !important;
+}
+
+.fc-current strong {
+  display: block !important;
+  margin-top: 3px !important;
+  color: #ffffff !important;
+  font-size: 12px !important;
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+}
+
+#areaSimulador.tool-section,
+.tool-pos {
+  padding: 18px 20px 28px !important;
+}
+
+.tool-sim .app,
+.tool-pos .pos-wrap {
+  width: min(1380px, 100%) !important;
+  max-width: 1380px !important;
+}
+
+.tool-sim .topo,
+.tool-pos .pos-hero {
+  background: var(--rm-blue) !important;
+  background-image: none !important;
+  color: #ffffff !important;
+  border: 0 !important;
+  border-bottom: 5px solid var(--rm-orange) !important;
+  border-radius: 14px !important;
+  padding: 18px 20px !important;
+  box-shadow: none !important;
+}
+
+.tool-sim .topo h1,
+.tool-pos .pos-hero h1 {
+  color: #ffffff !important;
+}
+
+.tool-sim .topo p,
+.tool-pos .pos-hero p {
+  color: rgba(255, 255, 255, .86) !important;
+}
+
+.tool-sim .topo-acoes .mini,
+.tool-sim .tag,
+.tool-pos .pos-eyebrow,
+.tool-pos .pos-count {
+  background: var(--rm-surface) !important;
+  background-image: none !important;
+  border: 1px solid var(--rm-border) !important;
+  color: var(--rm-blue) !important;
+  box-shadow: none !important;
+}
+
+.tool-sim .card,
+.tool-sim .curso,
+.tool-sim .modal-box,
+.tool-pos .pos-panel,
+.tool-pos .pos-course {
+  background: var(--rm-surface) !important;
+  background-image: none !important;
+  border: 1px solid var(--rm-border) !important;
+  box-shadow: 0 8px 20px rgba(6, 40, 72, .08) !important;
+}
+
+.tool-sim .card,
+.tool-pos .pos-panel {
+  border-top: 4px solid var(--rm-orange) !important;
+}
+
+.tool-sim .paste-box,
+.tool-sim textarea,
+.tool-sim input,
+.tool-sim select,
+.tool-sim .status,
+.tool-sim .resumo-item,
+.tool-sim .filtro-tecnico,
+.tool-sim .mensagem-fixa,
+.tool-sim .explicador,
+.tool-sim .explicacao-box,
+.tool-pos .pos-filter input {
+  background: var(--rm-surface-soft) !important;
+  background-image: none !important;
+  border-color: var(--rm-border) !important;
+  box-shadow: none !important;
+}
+
+.tool-sim .paste-icon,
+.tool-sim .btn-secundario,
+.tool-pos .pos-secondary {
+  background: #e4ebf2 !important;
+  background-image: none !important;
+  color: var(--rm-blue) !important;
+  border-color: #cbd7e2 !important;
+  box-shadow: none !important;
+}
+
+.tool-sim .btn-principal,
+.tool-sim .btn-topo,
+.tool-sim .btn-verde {
+  background: var(--rm-orange) !important;
+  background-image: none !important;
+  border-color: var(--rm-orange) !important;
+  color: #ffffff !important;
+  box-shadow: none !important;
+}
+
+.tool-sim .btn-limpar {
+  background: var(--rm-blue-dark) !important;
+  background-image: none !important;
+  color: #ffffff !important;
+  box-shadow: none !important;
+}
+
+.tool-sim .curso.disponivel {
+  background: #f5faf7 !important;
+  border-color: #b9d8c7 !important;
+}
+
+.tool-sim .curso.indisponivel {
+  background: #fff8f6 !important;
+  border-color: #e5c8c0 !important;
+}
+
+.tool-pos .pos-course-number {
+  background: var(--rm-blue) !important;
+  background-image: none !important;
+  color: #ffffff !important;
+}
+
+.tool-pos .pos-filter input:focus,
+.tool-sim textarea:focus,
+.tool-sim input:focus,
+.tool-sim select:focus,
+.tool-sim .paste-box:hover,
+.tool-sim .paste-box.active {
+  border-color: var(--rm-orange) !important;
+  outline: none !important;
+}
+
+@media (max-width: 760px) {
+  .fc-header-inner {
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 10px 12px 12px !important;
+  }
+
+  .fc-header-inner::after {
+    display: none !important;
+  }
+
+  .fc-brand {
+    width: auto !important;
+  }
+
+  .fc-current {
+    width: auto !important;
+    text-align: center !important;
+  }
+
+  .fc-menu {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 8px !important;
+    overflow: visible !important;
+  }
+
+  .fc-menu-button {
+    width: 100% !important;
+    padding: 9px 10px !important;
+  }
+
+  #areaSimulador.tool-section,
+  .tool-pos {
+    padding: 12px 10px 22px !important;
+  }
+
+  .tool-sim .topo,
+  .tool-pos .pos-hero {
+    padding: 16px !important;
+  }
+}
+
+/* === REFINO FINAL: CONTEÚDO INTEGRADO, CORES VIVAS E MAIS ÁREA PARA CURSOS === */
+:root {
+  --ui-navy: #062d4f;
+  --ui-blue: #064f82;
+  --ui-orange: #f26a21;
+  --ui-orange-dark: #d95412;
+  --ui-green: #16804b;
+  --ui-red: #bc2f2f;
+  --ui-page: #f4f6f8;
+  --ui-line: #cbd5df;
+  --ui-text: #14283a;
+  --ui-muted: #5c6f80;
+}
+
+body,
+.fc-root,
+.fc-main,
+.tool-section,
+.tool-sim,
+.tool-pos {
+  background: var(--ui-page) !important;
+}
+
+/* Cabeçalho menor e mais direto */
+.fc-header {
+  border-bottom-width: 3px !important;
+  box-shadow: 0 3px 10px rgba(6, 45, 79, .16) !important;
+}
+
+.fc-header-inner {
+  min-height: 52px !important;
+  padding: 5px 20px !important;
+  grid-template-columns: 210px minmax(0, 1fr) 210px !important;
+}
+
+.fc-brand,
+.fc-current {
+  width: 210px !important;
+}
+
+.fc-brand-logo {
+  width: 138px !important;
+  max-width: 138px !important;
+}
+
+.fc-menu {
+  gap: 8px !important;
+}
+
+.fc-menu-button {
+  min-height: 30px !important;
+  padding: 6px 12px !important;
+  border-radius: 4px !important;
+  font-size: 12px !important;
+}
+
+.fc-current {
+  font-size: 9px !important;
+}
+
+.fc-current strong {
+  margin-top: 1px !important;
+  font-size: 11px !important;
+}
+
+/* Simulador ocupa a tela e privilegia o resultado */
+#areaSimulador.tool-section {
+  height: calc(100vh - 52px) !important;
+  min-height: 610px !important;
+  padding: 10px 18px 8px !important;
+}
+
+.tool-sim .app {
+  width: min(1680px, 100%) !important;
+  max-width: 1680px !important;
+  grid-template-rows: auto minmax(0, 1fr) auto !important;
+  gap: 6px !important;
+}
+
+.tool-sim .topo {
+  min-height: 44px !important;
+  padding: 0 0 7px 12px !important;
+  border: 0 !important;
+  border-left: 5px solid var(--ui-orange) !important;
+  border-bottom: 1px solid var(--ui-line) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  color: var(--ui-text) !important;
+}
+
+.tool-sim .topo h1 {
+  margin: 0 0 2px !important;
+  color: var(--ui-navy) !important;
+  font-size: clamp(20px, 1.8vw, 25px) !important;
+}
+
+.tool-sim .topo p {
+  max-width: 920px !important;
+  color: var(--ui-muted) !important;
+  font-size: 11.5px !important;
+  line-height: 1.3 !important;
+}
+
+.tool-sim .topo-acoes {
+  gap: 7px !important;
+}
+
+.tool-sim .topo-acoes .mini {
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  color: var(--ui-blue) !important;
+  font-size: 10.5px !important;
+}
+
+.tool-sim .btn-topo {
+  min-height: 28px !important;
+  padding: 5px 10px !important;
+  border-radius: 4px !important;
+}
+
+.tool-sim .grid {
+  grid-template-columns: minmax(255px, .48fr) minmax(720px, 1.52fr) !important;
+  gap: 0 !important;
+  background: transparent !important;
+}
+
+/* Os dois lados deixam de parecer cards soltos */
+.tool-sim .card,
+.tool-pos .pos-panel,
+.tool-pos .pos-hero {
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.tool-sim .card {
+  padding: 10px 14px !important;
+}
+
+.tool-sim .entrada-card {
+  padding-left: 0 !important;
+  padding-right: 16px !important;
+  border-right: 1px solid var(--ui-line) !important;
+}
+
+.tool-sim .resultado-card {
+  padding-right: 0 !important;
+  padding-left: 18px !important;
+}
+
+.tool-sim .card-head {
+  min-height: 28px !important;
+  margin-bottom: 7px !important;
+  padding-bottom: 6px !important;
+  border-bottom: 2px solid var(--ui-navy) !important;
+}
+
+.tool-sim .card-head h2 {
+  color: var(--ui-navy) !important;
+  font-size: 16px !important;
+}
+
+.tool-sim .tag {
+  padding: 4px 7px !important;
+  border: 0 !important;
+  border-radius: 3px !important;
+  background: var(--ui-navy) !important;
+  color: #fff !important;
+  font-size: 10px !important;
+}
+
+/* A interface usa texto; a leitura por imagem continua preservada no código */
+.tool-sim .paste-box,
+.tool-sim #arquivoPrint {
+  display: none !important;
+}
+
+.tool-sim .input-grid {
+  grid-template-rows: auto auto minmax(220px, 1fr) !important;
+  gap: 7px !important;
+}
+
+.tool-sim .acoes {
+  grid-template-columns: 1fr auto !important;
+  gap: 6px !important;
+}
+
+.tool-sim .acoes button,
+.tool-sim .resultado-top > button,
+.tool-sim .filtro-tecnico-grid button {
+  min-height: 29px !important;
+  padding: 5px 9px !important;
+  border-radius: 4px !important;
+  font-size: 11px !important;
+}
+
+.tool-sim textarea,
+.tool-sim input,
+.tool-sim select,
+.tool-pos .pos-filter input {
+  border: 1px solid #b8c5d1 !important;
+  border-radius: 4px !important;
+  background: #ffffff !important;
+  color: var(--ui-text) !important;
+}
+
+.tool-sim textarea {
+  min-height: 220px !important;
+  padding: 10px !important;
+  font-size: 12px !important;
+}
+
+.tool-sim .status {
+  padding: 7px 9px !important;
+  border: 0 !important;
+  border-left: 3px solid var(--ui-blue) !important;
+  border-radius: 0 !important;
+  background: #e8f0f6 !important;
+  color: #3e566b !important;
+  font-size: 11px !important;
+}
+
+/* Indicadores em uma faixa única, sem quatro cards */
+.tool-sim .resumo {
+  grid-template-columns: repeat(4, minmax(80px, 1fr)) !important;
+  gap: 0 !important;
+  margin: 0 0 7px !important;
+  padding: 5px 0 !important;
+  border-top: 1px solid var(--ui-line) !important;
+  border-bottom: 1px solid var(--ui-line) !important;
+}
+
+.tool-sim .resumo-item {
+  padding: 3px 11px !important;
+  border: 0 !important;
+  border-right: 1px solid var(--ui-line) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+}
+
+.tool-sim .resumo-item:first-child {
+  padding-left: 4px !important;
+}
+
+.tool-sim .resumo-item:last-child {
+  border-right: 0 !important;
+}
+
+.tool-sim .resumo-item span {
+  margin-bottom: 1px !important;
+  color: var(--ui-muted) !important;
+  font-size: 9.5px !important;
+}
+
+.tool-sim .resumo-item strong {
+  color: var(--ui-navy) !important;
+  font-size: 18px !important;
+}
+
+.tool-sim .resultado-top {
+  grid-template-columns: auto auto minmax(360px, 1fr) !important;
+  gap: 6px !important;
+  margin-bottom: 6px !important;
+  align-items: end !important;
+}
+
+.tool-sim .filtro-tecnico {
+  grid-template-columns: auto minmax(280px, 1fr) !important;
+  align-items: center !important;
+  gap: 7px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+}
+
+.tool-sim .filtro-tecnico-topo {
+  display: block !important;
+}
+
+.tool-sim .filtro-tecnico-topo strong {
+  display: block !important;
+  font-size: 10.5px !important;
+}
+
+.tool-sim .filtro-tecnico-topo span {
+  display: none !important;
+}
+
+.tool-sim .filtro-tecnico-grid {
+  gap: 5px !important;
+}
+
+.tool-sim .campo-filtro-tecnico {
+  min-height: 29px !important;
+  padding: 5px 8px !important;
+  font-size: 11px !important;
+}
+
+.tool-sim .mensagem-fixa {
+  padding: 8px 10px !important;
+  border: 0 !important;
+  border-left: 5px solid var(--ui-orange) !important;
+  border-radius: 0 !important;
+  background: var(--ui-navy) !important;
+  color: #ffffff !important;
+  box-shadow: none !important;
+  font-size: 13px !important;
+}
+
+.tool-sim .lista {
+  gap: 0 !important;
+  padding-right: 5px !important;
+  scrollbar-width: thin !important;
+  scrollbar-color: var(--ui-orange) #dce3e9 !important;
+}
+
+.tool-sim .linhas-resultado {
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 0 18px !important;
+}
+
+.tool-sim .curso,
+.tool-sim .curso.disponivel,
+.tool-sim .curso.indisponivel {
+  min-height: 52px !important;
+  padding: 9px 4px 9px 11px !important;
+  border: 0 !important;
+  border-bottom: 1px solid var(--ui-line) !important;
+  border-left: 4px solid transparent !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.tool-sim .curso.disponivel {
+  border-left-color: var(--ui-green) !important;
+}
+
+.tool-sim .curso.indisponivel {
+  border-left-color: var(--ui-red) !important;
+}
+
+.tool-sim .curso h3 {
+  color: var(--ui-text) !important;
+  font-size: 13px !important;
+}
+
+.tool-sim .badge {
+  padding: 4px 7px !important;
+  border-radius: 3px !important;
+  font-size: 9.5px !important;
+}
+
+.tool-sim .badge.ok {
+  background: var(--ui-green) !important;
+  color: #fff !important;
+}
+
+.tool-sim .badge.no {
+  background: var(--ui-red) !important;
+  color: #fff !important;
+}
+
+.tool-sim .btn-principal,
+.tool-sim .btn-topo,
+.tool-sim .btn-verde {
+  background: var(--ui-orange) !important;
+}
+
+.tool-sim .btn-principal:hover,
+.tool-sim .btn-topo:hover,
+.tool-sim .btn-verde:hover {
+  background: var(--ui-orange-dark) !important;
+}
+
+.tool-sim .btn-secundario {
+  background: var(--ui-blue) !important;
+  color: #fff !important;
+}
+
+.tool-sim .btn-limpar {
+  background: var(--ui-navy) !important;
+}
+
+.tool-sim .rodape {
+  padding-top: 3px !important;
+  color: var(--ui-muted) !important;
+  font-size: 9px !important;
+}
+
+/* Pós com estágio segue a mesma linguagem integrada */
+.tool-pos {
+  min-height: calc(100vh - 52px) !important;
+  padding: 18px 24px 28px !important;
+}
+
+.tool-pos .pos-wrap {
+  width: min(1380px, 100%) !important;
+  max-width: 1380px !important;
+  gap: 16px !important;
+}
+
+.tool-pos .pos-hero {
+  padding: 4px 0 13px 14px !important;
+  border-left: 5px solid var(--ui-orange) !important;
+  border-bottom: 1px solid var(--ui-line) !important;
+}
+
+.tool-pos .pos-eyebrow {
+  margin-bottom: 4px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  color: var(--ui-orange-dark) !important;
+}
+
+.tool-pos .pos-hero h1 {
+  color: var(--ui-navy) !important;
+  font-size: clamp(25px, 2.6vw, 34px) !important;
+}
+
+.tool-pos .pos-hero p {
+  margin-top: 5px !important;
+  color: var(--ui-muted) !important;
+}
+
+.tool-pos .pos-panel {
+  padding: 0 !important;
+}
+
+.tool-pos .pos-panel-head {
+  margin-bottom: 9px !important;
+  padding-bottom: 8px !important;
+  border-bottom: 2px solid var(--ui-navy) !important;
+}
+
+.tool-pos .pos-panel-head h2 {
+  color: var(--ui-navy) !important;
+}
+
+.tool-pos .pos-count {
+  padding: 5px 9px !important;
+  border: 0 !important;
+  border-radius: 3px !important;
+  background: var(--ui-orange) !important;
+  color: #fff !important;
+}
+
+.tool-pos .pos-filter {
+  grid-template-columns: minmax(0, 1fr) auto !important;
+  max-width: 680px !important;
+  gap: 6px !important;
+  margin-bottom: 12px !important;
+}
+
+.tool-pos .pos-filter input {
+  min-height: 34px !important;
+  padding: 0 10px !important;
+  box-shadow: none !important;
+}
+
+.tool-pos .pos-secondary {
+  min-height: 34px !important;
+  border-radius: 4px !important;
+  background: var(--ui-navy) !important;
+  color: #fff !important;
+}
+
+.tool-pos .pos-list {
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 0 24px !important;
+}
+
+.tool-pos .pos-course {
+  min-height: 58px !important;
+  padding: 9px 4px !important;
+  border: 0 !important;
+  border-bottom: 1px solid var(--ui-line) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.tool-pos .pos-course-number {
+  border-radius: 3px !important;
+  background: var(--ui-blue) !important;
+}
+
+@media (max-width: 1180px) {
+  #areaSimulador.tool-section {
+    height: auto !important;
+    min-height: calc(100vh - 52px) !important;
+  }
+
+  .tool-sim .grid {
+    grid-template-columns: minmax(230px, .58fr) minmax(560px, 1.42fr) !important;
+  }
+
+  .tool-sim .resultado-top {
+    grid-template-columns: auto auto 1fr !important;
+  }
+}
+
+@media (max-width: 880px) {
+  .fc-header-inner {
+    grid-template-columns: 160px minmax(0, 1fr) 160px !important;
+  }
+
+  .fc-brand,
+  .fc-current {
+    width: 160px !important;
+  }
+
+  #areaSimulador.tool-section {
+    overflow: visible !important;
+  }
+
+  .tool-sim .grid {
+    grid-template-columns: 1fr !important;
+    overflow: visible !important;
+  }
+
+  .tool-sim .entrada-card {
+    padding-right: 0 !important;
+    padding-bottom: 14px !important;
+    border-right: 0 !important;
+    border-bottom: 1px solid var(--ui-line) !important;
+  }
+
+  .tool-sim .resultado-card {
+    padding-left: 0 !important;
+    padding-top: 14px !important;
+  }
+
+  .tool-sim .input-grid {
+    grid-template-rows: auto auto 210px !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .fc-header-inner {
+    min-height: auto !important;
+    padding: 7px 10px 9px !important;
+  }
+
+  .fc-brand-logo {
+    width: 132px !important;
+  }
+
+  .fc-current {
+    display: none !important;
+  }
+
+  .tool-sim .topo {
+    align-items: flex-start !important;
+    padding-left: 10px !important;
+  }
+
+  .tool-sim .topo-acoes {
+    width: auto !important;
+  }
+
+  .tool-sim .topo-acoes .mini {
+    display: none !important;
+  }
+
+  .tool-sim .resultado-top,
+  .tool-sim .filtro-tecnico,
+  .tool-sim .filtro-tecnico-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .tool-sim .resultado-top > button,
+  .tool-sim .filtro-tecnico-grid button {
+    width: 100% !important;
+  }
+
+  .tool-sim .linhas-resultado,
+  .tool-pos .pos-list {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* === MENU LATERAL RETRÁTIL + PALETA RUMO AO 1 MILHÃO === */
+:root {
+  --ui-navy: #00275a;
+  --ui-blue: #004f9e;
+  --ui-blue-dark: #001735;
+  --ui-orange: #ff6d01;
+  --ui-orange-dark: #e95d00;
+  --ui-orange-light: #ff9700;
+  --ui-page: #f2f5f8;
+  --ui-line: #cbd7e3;
+}
+
+html,
+body {
+  min-height: 100% !important;
+  background: var(--ui-page) !important;
+}
+
+body {
+  overflow-x: hidden !important;
+}
+
+.fc-root {
+  min-height: 100vh !important;
+}
+
+/* Barra lateral fixa */
+.fc-header {
+  position: fixed !important;
+  inset: 0 auto 0 0 !important;
+  width: 232px !important;
+  height: 100vh !important;
+  z-index: 1000 !important;
+  overflow: visible !important;
+  background: var(--ui-navy) !important;
+  border: 0 !important;
+  border-right: 2px solid var(--ui-orange) !important;
+  border-radius: 0 18px 18px 0 !important;
+  box-shadow: 6px 0 20px rgba(0, 23, 53, .2) !important;
+  transition: width .24s ease !important;
+}
+
+.fc-header-inner {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 100vh !important;
+  padding: 22px 14px 17px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
+  justify-content: flex-start !important;
+  gap: 17px !important;
+}
+
+.fc-header-inner::after {
+  display: none !important;
+}
+
+.fc-brand {
+  width: 100% !important;
+  min-width: 0 !important;
+  min-height: 68px !important;
+  padding: 3px 2px 17px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-bottom: 1px solid rgba(255, 255, 255, .12) !important;
+}
+
+.fc-brand-logo {
+  content: url("logoWhite.png") !important;
+  display: block !important;
+  width: 190px !important;
+  max-width: 190px !important;
+  height: auto !important;
+  object-fit: contain !important;
+}
+
+.fc-brand::after {
+  content: "" !important;
+  display: none !important;
+  width: 42px !important;
+  height: 42px !important;
+  background: url("favicon.ico") center / contain no-repeat !important;
+}
+
+.fc-menu {
+  width: 100% !important;
+  min-width: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
+  justify-content: flex-start !important;
+  gap: 8px !important;
+}
+
+.fc-menu-button {
+  position: relative !important;
+  width: 100% !important;
+  min-height: 44px !important;
+  padding: 10px 11px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: 10px !important;
+  overflow: hidden !important;
+  border: 1px solid rgba(255, 255, 255, .18) !important;
+  border-radius: 9px !important;
+  background: rgba(255, 255, 255, .07) !important;
+  color: #ffffff !important;
+  font-size: 12px !important;
+  font-weight: 800 !important;
+  line-height: 1.1 !important;
+  text-align: left !important;
+  white-space: nowrap !important;
+}
+
+.fc-menu-button::before {
+  flex: 0 0 25px !important;
+  width: 25px !important;
+  height: 25px !important;
+  display: inline-grid !important;
+  place-items: center !important;
+  border-radius: 7px !important;
+  background: rgba(255, 255, 255, .14) !important;
+  color: #ffffff !important;
+  font-size: 11px !important;
+  font-weight: 900 !important;
+}
+
+.fc-menu-button[data-area="areaSimulador"]::before {
+  content: "S" !important;
+}
+
+.fc-menu-button[data-area="areaPosEstagio"]::before {
+  content: "P" !important;
+}
+
+.fc-menu-button::after {
+  content: "" !important;
+  position: absolute !important;
+  top: 9px !important;
+  bottom: 9px !important;
+  left: 0 !important;
+  width: 3px !important;
+  display: block !important;
+  border-radius: 0 3px 3px 0 !important;
+  background: var(--ui-orange) !important;
+  opacity: 0 !important;
+  transition: opacity .18s ease !important;
+}
+
+.fc-menu-button:hover {
+  background: rgba(255, 255, 255, .1) !important;
+  border-color: rgba(255, 255, 255, .28) !important;
+  color: #ffffff !important;
+}
+
+.fc-menu-button.active {
+  background: rgba(255, 255, 255, .11) !important;
+  border-color: rgba(255, 255, 255, .24) !important;
+  border-left: 4px solid var(--ui-orange) !important;
+  padding-left: 8px !important;
+  color: #ffffff !important;
+  box-shadow: 0 8px 18px rgba(0, 16, 42, .18) !important;
+}
+
+.fc-menu-button.active::after {
+  display: none !important;
+  opacity: 0 !important;
+}
+
+.fc-current {
+  width: 100% !important;
+  min-width: 0 !important;
+  margin-top: auto !important;
+  padding: 13px 8px 0 !important;
+  display: block !important;
+  border-top: 1px solid rgba(255, 255, 255, .12) !important;
+  color: rgba(255, 255, 255, .62) !important;
+  font-size: 9px !important;
+  text-align: left !important;
+}
+
+.fc-current strong {
+  margin-top: 3px !important;
+  color: #ffffff !important;
+  font-size: 11px !important;
+}
+
+/* A seta só aparece quando o ponteiro entra na barra */
+.fc-sidebar-toggle {
+  position: absolute !important;
+  top: 50% !important;
+  right: -21px !important;
+  z-index: 1002 !important;
+  width: 42px !important;
+  height: 42px !important;
+  min-height: 42px !important;
+  padding: 0 !important;
+  display: grid !important;
+  place-items: center !important;
+  border: 0 !important;
+  border-radius: 50% !important;
+  background: transparent !important;
+  color: var(--ui-orange) !important;
+  box-shadow: none !important;
+  opacity: 0 !important;
+  transform: translateY(-50%) !important;
+  transition: opacity .18s ease, background .18s ease !important;
+}
+
+.fc-sidebar-toggle span {
+  width: 42px !important;
+  height: 42px !important;
+  display: grid !important;
+  place-items: center !important;
+  border: 1px solid #d7e0e9 !important;
+  border-radius: 50% !important;
+  background: #ffffff !important;
+  color: var(--ui-orange) !important;
+  box-shadow: 0 8px 22px rgba(0, 23, 53, .18) !important;
+  font-size: 24px !important;
+  line-height: 1 !important;
+  transition: transform .24s ease !important;
+}
+
+.fc-header:hover .fc-sidebar-toggle,
+.fc-sidebar-toggle:focus-visible {
+  opacity: 1 !important;
+}
+
+.fc-sidebar-toggle:hover {
+  background: transparent !important;
+  color: var(--ui-orange-dark) !important;
+}
+
+.fc-main {
+  width: auto !important;
+  min-height: 100vh !important;
+  margin-left: 232px !important;
+  overflow: hidden !important;
+  transition: margin-left .24s ease !important;
+}
+
+#areaSimulador.tool-section {
+  width: 100% !important;
+  height: 100vh !important;
+  min-height: 610px !important;
+  padding: 12px 18px 9px !important;
+}
+
+.tool-pos {
+  width: 100% !important;
+  min-height: 100vh !important;
+}
+
+/* Estado compacto */
+body.sidebar-compact .fc-header {
+  width: 72px !important;
+}
+
+body.sidebar-compact .fc-main {
+  margin-left: 72px !important;
+}
+
+body.sidebar-compact .fc-header-inner {
+  padding-left: 9px !important;
+  padding-right: 9px !important;
+}
+
+body.sidebar-compact .fc-brand-logo {
+  display: none !important;
+}
+
+body.sidebar-compact .fc-brand::after {
+  display: block !important;
+}
+
+body.sidebar-compact .fc-menu-button {
+  width: 46px !important;
+  min-height: 52px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding: 0 !important;
+  justify-content: center !important;
+  gap: 0 !important;
+  font-size: 0 !important;
+}
+
+body.sidebar-compact .fc-menu-button::before {
+  width: 100% !important;
+  height: 100% !important;
+  flex-basis: 100% !important;
+  border-radius: 8px !important;
+  background: transparent !important;
+  font-size: 15px !important;
+}
+
+body.sidebar-compact .fc-menu-button::after {
+  top: 11px !important;
+  bottom: 11px !important;
+}
+
+body.sidebar-compact .fc-current {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  font-size: 0 !important;
+  text-align: center !important;
+}
+
+body.sidebar-compact .fc-current::after {
+  content: "CG" !important;
+  color: rgba(255, 255, 255, .78) !important;
+  font-size: 9px !important;
+  font-weight: 900 !important;
+}
+
+body.sidebar-compact .fc-current strong {
+  display: none !important;
+}
+
+body.sidebar-compact .fc-sidebar-toggle span {
+  transform: rotate(180deg) !important;
+}
+
+/* Um pouco de arredondamento, sem retornar ao excesso de cards */
+.tool-sim .topo,
+.tool-pos .pos-hero {
+  padding: 10px 12px !important;
+  border: 1px solid var(--ui-line) !important;
+  border-left: 5px solid var(--ui-orange) !important;
+  border-radius: 10px !important;
+  background: #ffffff !important;
+}
+
+.tool-sim .card-head,
+.tool-pos .pos-panel-head {
+  border-bottom-color: var(--ui-navy) !important;
+}
+
+.tool-sim .tag,
+.tool-pos .pos-count {
+  border-radius: 7px !important;
+  background: var(--ui-orange) !important;
+  color: #ffffff !important;
+}
+
+.tool-sim textarea,
+.tool-sim input,
+.tool-sim select,
+.tool-pos .pos-filter input {
+  border-radius: 8px !important;
+}
+
+.tool-sim .status {
+  border-radius: 8px !important;
+  background: #e6eef5 !important;
+  border-left-color: var(--ui-blue) !important;
+}
+
+.tool-sim .resumo {
+  padding: 6px !important;
+  border: 1px solid var(--ui-line) !important;
+  border-radius: 9px !important;
+  background: #ffffff !important;
+}
+
+.tool-sim .filtro-tecnico {
+  padding: 4px 6px !important;
+  border-radius: 8px !important;
+  background: #e7eef5 !important;
+}
+
+.tool-sim .mensagem-fixa {
+  border-radius: 9px !important;
+  background: var(--ui-navy) !important;
+  border-left-color: var(--ui-orange) !important;
+}
+
+.tool-sim .curso,
+.tool-sim .curso.disponivel,
+.tool-sim .curso.indisponivel,
+.tool-pos .pos-course {
+  margin-bottom: 6px !important;
+  border: 1px solid var(--ui-line) !important;
+  border-radius: 8px !important;
+  background: #ffffff !important;
+}
+
+.tool-sim .curso.disponivel {
+  border-left: 5px solid var(--ui-green) !important;
+}
+
+.tool-sim .curso.indisponivel {
+  border-left: 5px solid var(--ui-red) !important;
+}
+
+.tool-sim .badge,
+.tool-pos .pos-course-number {
+  border-radius: 6px !important;
+}
+
+.tool-sim button,
+.tool-pos button,
+.tool-sim .btn-topo,
+.tool-sim .acoes button,
+.tool-sim .resultado-top > button,
+.tool-sim .filtro-tecnico-grid button {
+  border-radius: 8px !important;
+}
+
+.tool-sim .btn-principal,
+.tool-sim .btn-topo,
+.tool-sim .btn-verde,
+.tool-pos .pos-count {
+  background: var(--ui-orange) !important;
+}
+
+.tool-sim .btn-secundario,
+.tool-pos .pos-course-number {
+  background: var(--ui-blue) !important;
+}
+
+.tool-sim .btn-limpar,
+.tool-pos .pos-secondary {
+  background: var(--ui-blue-dark) !important;
+}
+
+@media (max-width: 880px) {
+  .fc-header {
+    width: 210px !important;
+  }
+
+  .fc-main {
+    margin-left: 66px !important;
+  }
+
+  body.sidebar-compact .fc-header {
+    width: 66px !important;
+  }
+
+  body.sidebar-compact .fc-main {
+    margin-left: 66px !important;
+  }
+
+  #areaSimulador.tool-section {
+    height: auto !important;
+    min-height: 100vh !important;
+    padding: 10px 12px 18px !important;
+  }
+}
+
+@media (max-width: 560px) {
+  .fc-main,
+  body.sidebar-compact .fc-main {
+    margin-left: 60px !important;
+  }
+
+  .fc-header,
+  body.sidebar-compact .fc-header {
+    width: 60px !important;
+  }
+
+  .fc-header-inner {
+    padding: 12px 7px !important;
+  }
+
+  .fc-brand::after {
+    width: 38px !important;
+    height: 38px !important;
+  }
+
+  .fc-sidebar-toggle {
+    right: -18px !important;
+    width: 36px !important;
+    height: 36px !important;
+    min-height: 36px !important;
+  }
+
+  .fc-sidebar-toggle span {
+    width: 36px !important;
+    height: 36px !important;
+  }
+}
+
+/* Aviso individual de atualização: aparece uma vez por navegador e versão */
+.app-update-notice[hidden] {
+  display: none !important;
+}
+
+.app-update-notice {
+  position: fixed !important;
+  top: 50% !important;
+  left: 50% !important;
+  right: auto !important;
+  bottom: auto !important;
+  z-index: 2100 !important;
+  width: min(430px, calc(100vw - 32px)) !important;
+  padding: 20px !important;
+  display: grid !important;
+  grid-template-columns: 46px minmax(0, 1fr) !important;
+  gap: 14px !important;
+  border: 1px solid #d5dee7 !important;
+  border-left: 4px solid var(--ui-orange) !important;
+  border-radius: 14px !important;
+  background: #ffffff !important;
+  box-shadow: 0 28px 70px rgba(0, 18, 43, .35) !important;
+  color: #172b3d !important;
+  transform: translate(-50%, -50%) !important;
+}
+
+body.app-update-required {
+  overflow: hidden !important;
+}
+
+body.app-update-required::before {
+  content: "" !important;
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 2099 !important;
+  display: block !important;
+  background: rgba(0, 23, 53, .76) !important;
+  backdrop-filter: blur(3px) !important;
+  -webkit-backdrop-filter: blur(3px) !important;
+  pointer-events: all !important;
+}
+
+body.app-update-required .fc-header,
+body.app-update-required .fc-main {
+  pointer-events: none !important;
+  user-select: none !important;
+}
+
+.app-update-icon {
+  width: 46px !important;
+  height: 46px !important;
+  display: grid !important;
+  place-items: center !important;
+  border-radius: 10px !important;
+  background: #e8eef6 !important;
+  color: var(--ui-navy) !important;
+  font-size: 20px !important;
+  font-weight: 900 !important;
+}
+
+.app-update-content h2 {
+  margin: 0 0 4px !important;
+  color: var(--ui-navy) !important;
+  font-size: 18px !important;
+  line-height: 1.2 !important;
+}
+
+.app-update-content p {
+  margin: 0 !important;
+  color: #607385 !important;
+  font-size: 12px !important;
+  line-height: 1.45 !important;
+}
+
+.app-update-button {
+  width: 100% !important;
+  min-height: 40px !important;
+  margin-top: 14px !important;
+  padding: 9px 14px !important;
+  border: 0 !important;
+  border-radius: 8px !important;
+  background: var(--ui-orange) !important;
+  color: #ffffff !important;
+  font-family: var(--fc-font) !important;
+  font-size: 12px !important;
+  font-weight: 800 !important;
+  cursor: pointer !important;
+}
+
+.app-update-button:hover {
+  background: var(--ui-orange-dark) !important;
+}
+
+.app-update-button:disabled {
+  cursor: wait !important;
+  opacity: .72 !important;
+}
+
+@media (max-width: 560px) {
+  .app-update-notice {
+    top: 50% !important;
+    left: 50% !important;
+    right: auto !important;
+    bottom: auto !important;
+    width: calc(100vw - 28px) !important;
+    padding: 17px !important;
+    grid-template-columns: 40px minmax(0, 1fr) !important;
+    gap: 12px !important;
+    transform: translate(-50%, -50%) !important;
+  }
+
+  .app-update-icon {
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 9px !important;
+    font-size: 18px !important;
+  }
+}
+
+/* Modal de explicação integrado: uma única superfície principal */
+.tool-sim #modalExplicacao.modal-overlay {
+  background: rgba(0, 23, 53, .66) !important;
+  backdrop-filter: blur(2px) !important;
+  -webkit-backdrop-filter: blur(2px) !important;
+}
+
+.tool-sim #modalExplicacao .modal-box {
+  width: min(720px, 100%) !important;
+  padding: 0 !important;
+  overflow: auto !important;
+  border: 1px solid #cbd7e3 !important;
+  border-radius: 16px !important;
+  background: #ffffff !important;
+  box-shadow: 0 28px 72px rgba(0, 18, 43, .32) !important;
+}
+
+.tool-sim #modalExplicacao .modal-topo {
+  min-height: 74px !important;
+  margin: 0 !important;
+  padding: 17px 20px 15px !important;
+  border-bottom: 1px solid #d7e0e9 !important;
+  background: #ffffff !important;
+}
+
+.tool-sim #modalExplicacao .modal-topo h3 {
+  color: var(--ui-navy) !important;
+  font-size: 19px !important;
+}
+
+.tool-sim #modalExplicacao .modal-topo p {
+  margin-top: 4px !important;
+  color: #66798b !important;
+  font-size: 12px !important;
+}
+
+.tool-sim #modalExplicacao .modal-fechar {
+  width: 36px !important;
+  min-width: 36px !important;
+  height: 36px !important;
+  min-height: 36px !important;
+  padding: 0 !important;
+  border: 1px solid #d7e0e9 !important;
+  border-radius: 50% !important;
+  background: #eef3f7 !important;
+  color: var(--ui-navy) !important;
+  box-shadow: none !important;
+}
+
+.tool-sim #modalExplicacao .explicador {
+  padding: 0 !important;
+  display: grid !important;
+  gap: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.tool-sim #modalExplicacao .explicador-top {
+  padding: 14px 20px 9px !important;
+  border: 0 !important;
+  background: transparent !important;
+}
+
+.tool-sim #modalExplicacao .explicador-top strong {
+  color: var(--ui-navy) !important;
+  font-size: 12px !important;
+  text-transform: uppercase !important;
+  letter-spacing: .035em !important;
+}
+
+.tool-sim #modalExplicacao .explicador-top span {
+  color: #718395 !important;
+  font-size: 11px !important;
+}
+
+.tool-sim #modalExplicacao .explicador-grid {
+  padding: 0 20px 14px !important;
+  grid-template-columns: minmax(0, 1fr) auto !important;
+  gap: 8px !important;
+}
+
+.tool-sim #modalExplicacao .campo-texto {
+  min-height: 40px !important;
+  padding: 9px 11px !important;
+  border: 1px solid #bfcbd7 !important;
+  border-radius: 8px !important;
+  background: #ffffff !important;
+  box-shadow: none !important;
+}
+
+.tool-sim #modalExplicacao .campo-texto:focus {
+  border-color: var(--ui-orange) !important;
+  box-shadow: 0 0 0 3px rgba(255, 109, 1, .12) !important;
+}
+
+.tool-sim #modalExplicacao .explicador-grid .btn-principal {
+  min-width: 88px !important;
+  min-height: 40px !important;
+  padding: 8px 15px !important;
+}
+
+.tool-sim #modalExplicacao .explicacao-box {
+  min-height: 126px !important;
+  margin: 0 20px !important;
+  padding: 14px 15px !important;
+  border: 0 !important;
+  border-left: 4px solid var(--ui-orange) !important;
+  border-radius: 8px !important;
+  background: #f1f5f8 !important;
+  color: #203548 !important;
+  box-shadow: none !important;
+  font-size: 13px !important;
+  line-height: 1.5 !important;
+}
+
+.tool-sim #modalExplicacao .explicacao-box.vazia {
+  color: #718395 !important;
+}
+
+.tool-sim #modalExplicacao .explicador-acoes {
+  margin-top: 16px !important;
+  padding: 14px 20px 18px !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 8px !important;
+  border-top: 1px solid #d7e0e9 !important;
+  background: #ffffff !important;
+}
+
+.tool-sim #modalExplicacao .explicador-acoes button {
+  min-height: 38px !important;
+}
+
+@media (max-width: 600px) {
+  .tool-sim #modalExplicacao .modal-box {
+    border-radius: 12px !important;
+  }
+
+  .tool-sim #modalExplicacao .explicador-top {
+    align-items: flex-start !important;
+    flex-direction: column !important;
+    gap: 3px !important;
+  }
+
+  .tool-sim #modalExplicacao .explicador-grid,
+  .tool-sim #modalExplicacao .explicador-acoes {
+    grid-template-columns: 1fr !important;
+  }
+
+  .tool-sim #modalExplicacao .explicacao-box {
+    min-height: 145px !important;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -4477,18 +6100,106 @@ body {
 <div aria-label="Ferramentas Comercial" class="fc-brand">
 <img alt="UNIFAHE" class="fc-brand-logo" src="data:image/png;base64,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"/>
 </div>
-<nav aria-label="Menu principal" class="fc-menu">
-<button class="fc-menu-button active" data-area="areaInicio" type="button">Início</button>
-<button class="fc-menu-button" data-area="areaLinks" type="button">Links</button>
-<button class="fc-menu-button" data-area="areaSimulador" type="button">Simulador Técnico</button>
-<button class="fc-menu-button" data-area="areaPosEstagio" type="button">Pós com Estágio</button>
-<button class="fc-menu-button" data-area="areaCampanhas" type="button">Campanhas</button>
+<button aria-controls="fcMenuPrincipal" aria-expanded="true" aria-label="Compactar menu lateral" class="fc-sidebar-toggle" id="fcSidebarToggle" title="Compactar menu" type="button"><span aria-hidden="true">‹</span></button>
+<nav aria-label="Menu principal" class="fc-menu" id="fcMenuPrincipal">
+<button class="fc-menu-button active" data-area="areaSimulador" title="Simulador Técnico" type="button">Simulador Técnico</button>
+<button class="fc-menu-button" data-area="areaPosEstagio" title="Pós com Estágio" type="button">Pós com Estágio</button>
 </nav>
-<div class="fc-current">Área atual:<strong id="fcAreaAtual">Início</strong></div>
+<div class="fc-current">Desenvolvido por<strong>Cauê Galates</strong></div>
 </div>
 </header>
+<script>
+  (function () {
+    const storageKey = 'unifaheSidebarCompacta';
+    const toggle = document.getElementById('fcSidebarToggle');
+    const brandLogo = document.querySelector('.fc-brand-logo');
+    if (brandLogo) brandLogo.src = 'logoWhite.png';
+    if (!toggle) return;
+
+    let savedState = null;
+    try { savedState = localStorage.getItem(storageKey); } catch (error) {}
+
+    if (savedState === '1' || savedState === null) {
+      document.body.classList.add('sidebar-compact');
+    }
+
+    function syncSidebarState() {
+      const compact = document.body.classList.contains('sidebar-compact');
+      toggle.setAttribute('aria-expanded', String(!compact));
+      toggle.setAttribute('aria-label', compact ? 'Expandir menu lateral' : 'Compactar menu lateral');
+      toggle.title = compact ? 'Expandir menu' : 'Compactar menu';
+    }
+
+    toggle.addEventListener('click', function () {
+      document.body.classList.toggle('sidebar-compact');
+      try {
+        localStorage.setItem(storageKey, document.body.classList.contains('sidebar-compact') ? '1' : '0');
+      } catch (error) {}
+      syncSidebarState();
+    });
+
+    syncSidebarState();
+  })();
+</script>
+<aside aria-live="assertive" aria-modal="true" class="app-update-notice" hidden id="appUpdateNotice" role="dialog">
+<div aria-hidden="true" class="app-update-icon">↻</div>
+<div class="app-update-content">
+<h2>Nova atualização disponível</h2>
+<p>Atualizamos o visual e melhoramos a navegação. Recarregue a página para usar a nova versão.</p>
+<button class="app-update-button" id="appUpdateButton" type="button">Atualizar página</button>
+</div>
+</aside>
+<script>
+  (function () {
+    const APP_UPDATE_VERSION = '2026.08.25-explanation-integrated-v1';
+    const UPDATE_STORAGE_KEY = 'unifaheAppUpdateVersion';
+    const SESSION_RELOAD_KEY = 'unifaheAppUpdateReloaded';
+    const notice = document.getElementById('appUpdateNotice');
+    const button = document.getElementById('appUpdateButton');
+    const appSidebar = document.querySelector('.fc-header');
+    if (!notice || !button) return;
+
+    function readStorage(storage, key) {
+      try { return storage.getItem(key); } catch (error) { return null; }
+    }
+
+    function writeStorage(storage, key, value) {
+      try { storage.setItem(key, value); } catch (error) {}
+    }
+
+    const acknowledgedVersion = readStorage(localStorage, UPDATE_STORAGE_KEY);
+    const reloadedThisSession = readStorage(sessionStorage, SESSION_RELOAD_KEY);
+
+    if (acknowledgedVersion !== APP_UPDATE_VERSION && reloadedThisSession !== APP_UPDATE_VERSION) {
+      notice.hidden = false;
+      document.body.classList.add('app-update-required');
+      if (appSidebar) {
+        appSidebar.inert = true;
+        appSidebar.setAttribute('aria-hidden', 'true');
+      }
+      document.addEventListener('DOMContentLoaded', function () {
+        const appMain = document.querySelector('.fc-main');
+        if (appMain) {
+          appMain.inert = true;
+          appMain.setAttribute('aria-hidden', 'true');
+        }
+      }, { once: true });
+      window.setTimeout(function () { button.focus(); }, 0);
+    }
+
+    button.addEventListener('click', function () {
+      button.disabled = true;
+      button.textContent = 'Atualizando...';
+      writeStorage(localStorage, UPDATE_STORAGE_KEY, APP_UPDATE_VERSION);
+      writeStorage(sessionStorage, SESSION_RELOAD_KEY, APP_UPDATE_VERSION);
+      window.setTimeout(function () {
+        window.location.reload();
+      }, 250);
+    });
+  })();
+</script>
 <main class="fc-main">
-<section aria-label="Página inicial" class="tool-section tool-home active" id="areaInicio">
+<section aria-label="Página inicial" class="tool-section tool-home" id="areaInicio">
 <div class="home-wrap">
 <header class="home-hero">
 <div class="home-hero-content">
@@ -4672,12 +6383,12 @@ body {
 </main>
 </div>
 </section>
-<section aria-label="Simulador técnico" class="tool-section tool-sim" id="areaSimulador">
+<section aria-label="Simulador técnico" class="tool-section tool-sim active" id="areaSimulador">
 <div class="app">
 <header class="topo">
 <div>
 <h1>Simulador de Cursos Tecnólogos</h1>
-<p>Cole um print ou uma lista/tabela de cursos. O sistema limpa valores, carga horária e botão “Matricule-se”, verifica no novo PDF de referência e também gera uma explicação pronta para o curso escolhido.</p>
+<p>Cole uma lista ou tabela de cursos. O sistema limpa valores e carga horária, compara com a base de referência e gera uma explicação pronta para o curso escolhido.</p>
 </div>
 <div class="topo-acoes">
 <div class="mini">PDF de referência: Tecnólogos 12 e 18 meses</div>
@@ -4687,8 +6398,8 @@ body {
 <main class="grid">
 <section class="card entrada-card">
 <div class="card-head">
-<h2>Print ou texto</h2>
-<span class="tag">Ctrl + V ou texto</span>
+<h2>Lista para verificar</h2>
+<span class="tag">Cole o texto</span>
 </div>
 <div class="input-grid">
 <label class="paste-box" for="arquivoPrint" id="areaPrint">
@@ -4706,7 +6417,7 @@ body {
 </div>
 <div>
 <div class="barra" id="barra"><span></span></div>
-<div class="status" id="statusSimulador">Aguardando print ou texto. Para texto, cole a lista abaixo e clique em Verificar.</div>
+<div class="status" id="statusSimulador">Cole a lista de cursos abaixo e clique em Verificar.</div>
 </div>
 <textarea id="textoLido" placeholder="Cole aqui os cursos em texto. Pode vir assim:
 Tecnologia em Gestão de Varejo    4 Trimestres    1240 horas    14    1+12x de R$ 140,35
@@ -4759,7 +6470,7 @@ O sistema vai limpar e verificar apenas o nome do curso, usando o período da ba
 </div>
 </section>
 </main>
-<footer class="rodape">Desenvolvido por caue &amp; IA</footer>
+<footer class="rodape">Desenvolvido por Cauê Galates</footer>
 </div>
 <div class="modal-overlay" id="modalExplicacao" onclick="fecharModalExplicacao(event)">
 <div aria-labelledby="tituloModalExplicacao" aria-modal="true" class="modal-box" onclick="event.stopPropagation()" role="dialog">
@@ -6326,7 +8037,7 @@ O sistema vai limpar e verificar apenas o nome do curso, usando o período da ba
         .replaceAll("'", '&#039;');
     }
   </script>
-<script type="module">
+<script type="application/x-disabled" data-disabled-feature="campanhas">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-app.js";
     import {
       getDatabase,
